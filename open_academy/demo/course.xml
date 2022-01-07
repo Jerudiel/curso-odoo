@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="course_demo1" model="course">
+        <field name="title">Curso Python</field>
+    </record>
+
+    <record id="course_demo2" model="course">
+        <field name="title">Curso Odoo</field>
+        <field name="description">Prueba</field>
+    </record>
+</odoo>
