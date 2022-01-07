@@ -9,7 +9,13 @@
                 <sheet>
                     <group>
                         <field name="title"/>
-                        <field name="description"/>
+                    </group>
+                    <group>
+                        <notebook>
+                            <page string="Description">
+                                <field name="description"/>
+                            </page>
+                        </notebook>
                     </group>
                 </sheet>
             </form>
