@@ -33,4 +33,15 @@
         <field name="view_mode">tree,form</field>
     </record>
 
+    <record id="course_view_search" model="ir.ui.view">
+        <field name="name">course.view.search</field>
+        <field name="model">course</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="title"/>
+                <field name="description"/>
+            </search>
+        </field>
+    </record>
+
 </odoo>
