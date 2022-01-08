@@ -21,6 +21,7 @@
         "security/ir.model.access.csv",
 
         "views/course.xml",
+        "views/session.xml",
 
         "data/ir_ui_menu.xml",
     ],
