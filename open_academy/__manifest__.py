@@ -20,6 +20,7 @@
     'data': [
         "security/ir.model.access.csv",
 
+        "views/partner.xml",
         "views/course.xml",
         "views/session.xml",
 
