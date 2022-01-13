@@ -29,5 +29,6 @@
 
     'demo': [
         "demo/course.xml",
+        "demo/category.xml",
     ],
 }

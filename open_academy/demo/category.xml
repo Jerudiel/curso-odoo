@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="partner_category_teacher_level_1" model="res.partner.category">
+        <field name="name">Teacher / Level 1</field>
+    </record>
+
+    <record id="partner_category_teacher_level_2" model="res.partner.category">
+        <field name="name">Teacher / Level 2</field>
+    </record>
+</odoo>
