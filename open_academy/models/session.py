@@ -1,3 +1,4 @@
+from email.policy import default
 from odoo import models, fields, api
 
 
@@ -6,13 +7,14 @@ class Session(models.Model):
     _description = 'Session'
 
     name = fields.Char()
-    start_date = fields.Datetime()
+    start_date = fields.Datetime(default=lambda self: fields.Date.today())
     duration = fields.Float()
     number_of_seats = fields.Integer()
     instructor_id = fields.Many2one("res.partner", domain="['|',('is_instructor','=',True),('category_id.name','like','Teacher')]")
     course_id = fields.Many2one("course", required=True)
     attendee_ids = fields.Many2many("res.partner")
     percentage_of_taken_seats = fields.Integer(compute='_compute_percentage_of_taken_seats')
+    active = fields.Boolean(default=True)
 
     @api.depends('number_of_seats','attendee_ids')
     def _compute_percentage_of_taken_seats(self):
