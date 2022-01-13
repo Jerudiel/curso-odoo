@@ -12,7 +12,7 @@
                         <field name="start_date"/>
                         <field name="duration"/>
                         <field name="number_of_seats"/>
-                        <field name="instructor_id" domain="[('is_instructor','=',True)]"/>
+                        <field name="instructor_id"/>
                         <field name="course_id"/>
                         <field name="attendee_ids"/>
                     </group>
