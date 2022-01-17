@@ -27,7 +27,8 @@
         <field name="name">session.view.tree</field>
         <field name="model">session</field>
         <field name="arch" type="xml">
-            <tree>
+            <tree decoration-danger="antiquity_of_the_session=='old'"
+            decoration-info="antiquity_of_the_session=='recently'">
                 <field name="name"/>
                 <field name="start_date"/>
                 <field name="duration" widget="timesheet_uom_timer"/>
@@ -37,6 +38,7 @@
                 <field name="attendee_ids"/>
                 <field name="percentage_of_taken_seats" widget="progressbar"/>
                 <field name="active"/>
+                <field name="antiquity_of_the_session" invisible="True"/>
             </tree>
         </field>
     </record>
