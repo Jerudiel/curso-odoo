@@ -16,6 +16,9 @@ class Session(models.Model):
     attendee_ids = fields.Many2many("res.partner")
     percentage_of_taken_seats = fields.Integer(compute='_compute_percentage_of_taken_seats')
     active = fields.Boolean(default=True)
+    antiquity_of_the_session = fields.Selection(
+        selection=[('recently', 'Recently'), ('old', 'Old'), ('normal', 'Normal')],
+        compute='_compute_antiquity_of_the_session', default='normal')
 
     @api.depends('number_of_seats', 'attendee_ids')
     def _compute_percentage_of_taken_seats(self):
@@ -40,3 +43,16 @@ class Session(models.Model):
         for record in self:
             if record.instructor_id in record.attendee_ids:
                 raise ValidationError(_("Instructor can't be in attendees"))
+
+    @api.depends('start_date')
+    def _compute_antiquity_of_the_session(self):
+        for record in self:
+            now_date = fields.Datetime.now()
+            session_date = record.start_date
+            days_to_now = (now_date - session_date).days
+            if days_to_now < 5:
+                record.antiquity_of_the_session = "recently"
+            elif days_to_now > 15:
+                record.antiquity_of_the_session = "old"
+            else:
+                record.antiquity_of_the_session = "normal"
