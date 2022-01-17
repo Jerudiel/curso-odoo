@@ -15,3 +15,10 @@ class Course(models.Model):
             'Title and description must be differents'),
         ('title_unique', 'UNIQUE (title)', 'Title must be unique'),
     ]
+
+    def copy(self, default=None):
+        default = dict(default or {})
+        default.update({
+            'title': f'Copy of {self.title}'
+        })
+        return super().copy(default)
