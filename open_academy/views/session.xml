@@ -43,10 +43,28 @@
         </field>
     </record>
 
+    <record id="session_view_calendar" model="ir.ui.view">
+        <field name="name">session.view.calendar</field>
+        <field name="model">session</field>
+        <field name="arch" type="xml">
+            <calendar date_start="start_date" color="name" mode="month">
+                <field name="name"/>
+                <field name="start_date"/>
+                <field name="duration" widget="timesheet_uom_timer"/>
+                <field name="number_of_seats"/>
+                <field name="instructor_id"/>
+                <field name="course_id"/>
+                <field name="attendee_ids"/>
+                <field name="percentage_of_taken_seats" widget="progressbar"/>
+                <field name="active"/>
+            </calendar>
+        </field>
+    </record>
+
     <record id="session_action_display_view" model="ir.actions.act_window">
         <field name="name">Session</field>
         <field name="res_model">session</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,calendar</field>
     </record>
 
 </odoo>
