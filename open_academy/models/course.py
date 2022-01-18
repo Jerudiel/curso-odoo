@@ -11,6 +11,7 @@ class Course(models.Model):
     session_ids = fields.One2many("session", "course_id")
 
     _sql_constraints = [
-        ('description_and_title_are_differents', 'CHECK (title <> description)', 'Title and description must be differents'),
+        ('description_and_title_are_differents', 'CHECK (title <> description)',
+            'Title and description must be differents'),
         ('title_unique', 'UNIQUE (title)', 'Title must be unique'),
     ]
