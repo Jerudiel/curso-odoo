@@ -19,6 +19,7 @@ class Session(models.Model):
     antiquity_of_the_session = fields.Selection(
         selection=[('recently', 'Recently'), ('old', 'Old'), ('normal', 'Normal')],
         compute='_compute_antiquity_of_the_session', default='normal')
+    attendee_count = fields.Integer(store=True, compute='_compute_attendee_count')
 
     @api.depends('number_of_seats', 'attendee_ids')
     def _compute_percentage_of_taken_seats(self):
@@ -56,3 +57,8 @@ class Session(models.Model):
                 record.antiquity_of_the_session = "old"
             else:
                 record.antiquity_of_the_session = "normal"
+
+    @api.depends('attendee_ids')
+    def _compute_attendee_count(self):
+        for record in self:
+            record.attendee_count = len(record.attendee_ids)
