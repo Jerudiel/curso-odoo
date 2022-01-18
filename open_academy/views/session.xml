@@ -79,10 +79,21 @@
         </field>
     </record>
 
+    <record id="session_view_graph" model="ir.ui.view">
+        <field name="name">session.view.graph</field>
+        <field name="model">session</field>
+        <field name="arch" type="xml">
+            <graph string="Number of attendees">
+                <field name="name"/>
+                <field name="attendee_count" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
     <record id="session_action_display_view" model="ir.actions.act_window">
         <field name="name">Session</field>
         <field name="res_model">session</field>
-        <field name="view_mode">tree,form,calendar,gantt</field>
+        <field name="view_mode">tree,form,calendar,gantt,graph</field>
     </record>
 
 </odoo>
