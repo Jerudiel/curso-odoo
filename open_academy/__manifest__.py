@@ -5,15 +5,12 @@
         Short (1 phrase/line) summary of the module's purpose, used as
         subtitle on modules listing or apps.openerp.com""",
 
-    'description': """
-        Long description of module's purpose
-    """,
-
-    'author': "My Company",
+    'author': "Odoo Community Association (OCA)",
     'website': "http://www.yourcompany.com",
+    'license': 'LGPL-3',
 
     'category': 'Uncategorized',
-    'version': '0.1',
+    'version': '15.0.0.0.1',
 
     'depends': ['base'],
 
