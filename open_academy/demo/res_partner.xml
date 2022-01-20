@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_partner_jerudiel" model="res.partner">
+        <field name="name">Jerudiel</field>
+        <field name="company_name">MyCompany</field>
+        <field name="email">jerudiel@mycompany.com</field>
+    </record>
+
+</odoo>
