@@ -15,6 +15,7 @@
     'depends': ['base'],
 
     'data': [
+        "data/res_groups.xml",
         "security/ir.model.access.csv",
 
         "views/partner.xml",
@@ -22,7 +23,7 @@
         "views/session.xml",
 
         "data/ir_ui_menu.xml",
-        "data/res_groups.xml",
+
     ],
 
     'demo': [
