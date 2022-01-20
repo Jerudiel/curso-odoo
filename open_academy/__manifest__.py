@@ -22,10 +22,13 @@
         "views/session.xml",
 
         "data/ir_ui_menu.xml",
+        "data/res_groups.xml",
     ],
 
     'demo': [
         "demo/course.xml",
         "demo/category.xml",
+        "demo/res_partner.xml",
+        "demo/user.xml",
     ],
 }

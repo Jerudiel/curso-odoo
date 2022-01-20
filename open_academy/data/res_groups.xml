@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="group_open_academy_session_read" model="res.groups">
+        <field name="name">OpenAcademy / Session Read</field>
+    </record>
+
+</odoo>
