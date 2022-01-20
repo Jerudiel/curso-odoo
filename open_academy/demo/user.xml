@@ -8,4 +8,11 @@
         <field name="groups_id" eval="[Command.set([ref('base.group_user'),ref('group_open_academy_session_read')])]"/>
     </record>
 
+    <record id="user_manager_session" model="res.users">
+        <field name="login">manager</field>
+        <field name="password">manager</field>
+        <field name="partner_id" ref="res_partner_open_academy_benito"/>
+        <field name="groups_id" eval="[Command.set([ref('base.group_user'),ref('group_open_academy_manager')])]"/>
+    </record>
+
 </odoo>

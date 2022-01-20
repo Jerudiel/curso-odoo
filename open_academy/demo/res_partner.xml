@@ -7,4 +7,10 @@
         <field name="email">jerudiel@mycompany.com</field>
     </record>
 
+    <record id="res_partner_open_academy_benito" model="res.partner">
+        <field name="name">Benito</field>
+        <field name="company_name">MyCompany</field>
+        <field name="email">jerudiel@mycompany.com</field>
+    </record>
+
 </odoo>
