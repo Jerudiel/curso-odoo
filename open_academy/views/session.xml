@@ -35,7 +35,6 @@
                 <field name="number_of_seats"/>
                 <field name="instructor_id"/>
                 <field name="course_id"/>
-                <field name="attendee_ids"/>
                 <field name="percentage_of_taken_seats" widget="progressbar"/>
                 <field name="active"/>
                 <field name="antiquity_of_the_session" invisible="True"/>
