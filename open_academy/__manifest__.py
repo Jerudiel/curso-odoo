@@ -16,6 +16,7 @@
 
     'data': [
         "data/res_groups.xml",
+        "data/ir_rule.xml",
         "security/ir.model.access.csv",
 
         "views/partner.xml",
