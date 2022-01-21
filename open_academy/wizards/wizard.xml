@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="assing_attendee_sessions_view_form" model="ir.ui.view">
+        <field name="name">assing.attendee.sessions.view.form</field>
+        <field name="model">assing.attendee.sessions</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="session_id"/>
+                        <field name="attendee_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="assing_attendee_sessions_action_display_view" model="ir.actions.act_window">
+        <field name="name">Assign Attendee Sessions</field>
+        <field name="res_model">assing.attendee.sessions</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="model_session"/>
+        <field name="context">{'default_session_ids':[(6,False, active_ids)],}</field>
+    </record>
+
+</odoo>
