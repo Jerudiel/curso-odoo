@@ -8,11 +8,11 @@
             <form>
                 <sheet>
                     <group>
-                        <field name="session_id"/>
+                        <field name="session_ids"/>
                         <field name="attendee_ids"/>
                     </group>
                     <footer>
-                        <button name="add_attendees_session" string="Add attendees" type="object"
+                        <button name="action_register_attendees_to_sessions" string="Add attendees" type="object"
                                 class="btn btn-primary o_form_button_edit"/>
                     </footer>
                 </sheet>
