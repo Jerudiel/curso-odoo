@@ -37,7 +37,9 @@ class Session(models.Model):
         elif len(self.attendee_ids) > self.number_of_seats:
             title = "Problem in number of attendees"
             message = "The number of attendees is more than number of seats available"
-        return {'warning': {'title': title, 'message': message}}
+
+        if title:
+            return {'warning': {'title': title, 'message': message}}
 
     @api.constrains('instructor_id', 'attendee_ids')
     def _check_instructor_is_not_in_attendees(self):
