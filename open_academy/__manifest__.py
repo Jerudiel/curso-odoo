@@ -25,6 +25,8 @@
 
         "data/ir_ui_menu.xml",
 
+        "wizards/wizard.xml",
+
     ],
 
     'demo': [
