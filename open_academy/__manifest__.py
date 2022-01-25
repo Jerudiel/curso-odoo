@@ -23,10 +23,12 @@
         "views/course.xml",
         "views/session.xml",
 
+        "report/session_report.xml",
+
         "data/ir_ui_menu.xml",
+        "data/ir_actions_report.xml",
 
         "wizards/wizard.xml",
-
     ],
 
     'demo': [

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="session_info" model="ir.actions.report">
+        <field name="name">Report Session</field>
+        <field name="model">session</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">open_academy.session_report</field>
+        <field name="attachment_use" eval="True"/>
+        <field name="attachment">('SESSION-'+(object.name or '').replace(' ','')+'.pdf')</field>
+        <field name="binding_model_id" ref="model_session"/>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>
