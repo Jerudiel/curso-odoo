@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id='dashboard_session_display_view_graph' model='ir.actions.act_window'>
+        <field name='name'>Session Graph</field>
+        <field name='res_model'>session</field>
+        <field name='view_mode'>graph</field>
+        <field name='view_id' ref='session_view_graph'/>
+    </record>
+
+    <record id='dashboard_session_display_view_calendar' model='ir.actions.act_window'>
+        <field name='name'>Session Calendar</field>
+        <field name='res_model'>session</field>
+        <field name='view_mode'>calendar</field>
+        <field name='view_id' ref='session_view_calendar'/>
+    </record>
+
+    <record id="dashboard_view_form" model="ir.ui.view">
+        <field name="name">Dashboard</field>
+        <field name="model">board.board</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Dashboard">
+                <board style="2-1">
+                    <column>
+                        <action name="%(dashboard_session_display_view_calendar)d" string="Calendar"/>
+                    </column>
+                    <column>
+                        <action name="%(dashboard_session_display_view_graph)d" string="Graph"/>
+                        <action name="%(course_action_display_view)d" string="Courses"/>
+                    </column>
+                </board>
+            </form>
+        </field>
+    </record>
+
+    <record id='dashboard_display_view' model='ir.actions.act_window'>
+        <field name='name'>Dashboard</field>
+        <field name='res_model'>board.board</field>
+        <field name='view_mode'>form</field>
+        <field name='usage'>menu</field>
+        <field name='view_id' ref='dashboard_view_form'/>
+    </record>
+
+</odoo>

@@ -12,7 +12,8 @@
     'category': 'Uncategorized',
     'version': '15.0.0.0.1',
 
-    'depends': ['base'],
+    'depends': ['base',
+                'board'],
 
     'data': [
         "data/res_groups.xml",
@@ -22,6 +23,7 @@
         "views/partner.xml",
         "views/course.xml",
         "views/session.xml",
+        "views/dashboard.xml",
 
         "report/session_report.xml",
 
