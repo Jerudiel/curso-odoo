@@ -41,6 +41,12 @@ class Session(models.Model):
         if title:
             return {_('warning'): {_('title'): title, _('message'): message}}
 
+    @api.constrains('number_of_seats', 'attendee_ids')
+    def _check_attendee_number_of_seats(self):
+        for record in self:
+            if record.number_of_seats < len(record.attendee_ids):
+                raise ValidationError(_(f"The {record.name} can't have more attendees"))
+
     @api.constrains('instructor_id', 'attendee_ids')
     def _check_instructor_is_not_in_attendees(self):
         for record in self:
